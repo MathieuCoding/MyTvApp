@@ -1,14 +1,21 @@
 // import reactLogo from './assets/react.svg'
 import { useState } from 'react'
 import './App.css'
+import { MyPicture } from './components/MyPicture';
+import { Search } from './components/Search';
+
 
 function App() {
   const [title, setTitle] = useState('Hello World !');
 
   return (
     <div className="App">
+      <MyPicture />
       <h1>{title}</h1>
       <button onClick={() => setTitle('Goodbye World !')}>Change title</button>
+      <br/><br/>
+      <Search />
+      
 
 
       {/* <div>
