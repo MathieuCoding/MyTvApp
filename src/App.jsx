@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <MyPicture />
       <h1>{title}</h1>
-      <button onClick={() => setTitle('Goodbye World !')}>Change title</button>
+      <button onClick={() => setTitle('Goodbye World !')}>I'm leaving</button>
       <br/><br/>
       <Search />
       

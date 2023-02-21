@@ -16,7 +16,7 @@ export function Search()
     const show = result.map((show) => 
     <div className="card-show">
         <p key={show.show.id}>{show.show.name}</p>
-        {show.show.image != null && <img src={show.show.image.medium} alt="sunshine in a tree" width="200px" height="auto"/> }       
+        {show.show.image != null ? <img src={show.show.image.medium} alt={show.show.name} width="200px" height="auto"/> : <img src="https://images.pexels.com/photos/3962259/pexels-photo-3962259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="we are closed sign" width="200px" height="auto"/>}       
     </div>
     );
 
@@ -29,3 +29,5 @@ export function Search()
         </div>
     )      
 }
+
+
