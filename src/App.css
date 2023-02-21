@@ -52,7 +52,9 @@ ul {
 }
 
 .card-show {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
 }
 
 #searchBar {

@@ -27,7 +27,7 @@ export function Search()
         <div>
             <input id="searchBar" type="text" onChange={(e) => setQuery(e.target.value)} value={query}/>
             <div className="card-container">
-                {result.map((tvshow) => <Result details={tvshow} />)}
+                {result.map((tvshow) => <Result key={tvshow.show.id}  details={tvshow} />)}
             </div>
         </div>
     )      
