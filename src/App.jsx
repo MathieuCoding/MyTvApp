@@ -1,7 +1,6 @@
 // import reactLogo from './assets/react.svg'
 import { useState } from 'react'
 import './App.css'
-import { MyPicture } from './components/MyPicture';
 import { Search } from './components/Search';
 
 
@@ -10,14 +9,9 @@ function App() {
 
   return (
     <div className="App">
-      <MyPicture />
       <h1>{title}</h1>
       <button onClick={() => setTitle('Goodbye World !')}>I'm leaving</button>
-      <br/><br/>
       <Search />
-      
-
-
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
