@@ -19,7 +19,7 @@ export function Show()
         return(
             
             <div className="show-container">
-                {result.image != null ? <img src={result.image.medium} alt={result.name} width="30%" height="auto"/> : <img src="https://images.pexels.com/photos/3962259/pexels-photo-3962259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="We are closed sign" width="200px" height="auto"/>}
+                {result.image != null ? <img src={result.image.medium} alt={result.name} width="40%" height="auto"/> : <img src="https://images.pexels.com/photos/3962259/pexels-photo-3962259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="We are closed sign" width="200px" height="auto"/>}
                 <h1>{result.name}</h1>
                 <h4>Release date: {result.premiered}</h4>
 

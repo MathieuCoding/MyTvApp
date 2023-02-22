@@ -5,12 +5,12 @@ import { Search } from './components/Search';
 
 
 function App() {
-  const [title, setTitle] = useState('Internet Media Drum & Bass');
+  const [title, setTitle] = useState('Very Mature Tomatoes');
 
   return (
     <div className="App">
       <h1>{title}</h1>
-      <button onClick={() => setTitle('Very Mature Tomatoes')}>Whaaaat ?</button>
+      <button onClick={() => setTitle('Internet Media Drum & Bass')}>Whaaaat ?</button>
       <Search />
     </div>
   )
