@@ -16,7 +16,7 @@ export function Search()
 
     return (
         <div>
-            <input id="searchBar" type="text" onChange={(e) => setQuery(e.target.value)} value={query}/>
+            <input id="searchBar" type="text" onChange={(e) => setQuery(e.target.value)} value={query} placeholder="Search"/>
             <div className="card-container">
                 {result.map((tvshow) => <Result key={tvshow.show.id}  details={tvshow} />)}
             </div>

@@ -24,9 +24,9 @@ export function Actor()
         return (
             <>
                 <h1>{actor.name}</h1>
-                {actor.image != null ? <img src={actor.image.medium} /> : <img src="https://cdn-icons-png.flaticon.com/512/7734/7734301.png" alt="no image to be shown" className="card-img-top" />}
+                {actor.image != null ? <img src={actor.image.medium} /> : <img src="https://images.pexels.com/photos/3962259/pexels-photo-3962259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Sorry we're closed sign" />}
                 <h4>Born {actor.birthday}</h4>
-                <h4>From {actor.country.name}</h4>
+                <h4>From {actor.country?.name}</h4>
                 <div>
                     <h3>Seen in :</h3>
                         {actorsShows.map((show) => <p key={show._embedded.show.id}><Link to={"/show/" + show._embedded.show.id}>{show._embedded.show.name}</Link></p>)}
@@ -35,9 +35,7 @@ export function Actor()
         )
     } else {
         return (
-            <div className="spinner-border" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </div>
+                <h2>Loading...</h2>
         )
     }
 }

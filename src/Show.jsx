@@ -16,20 +16,21 @@ export function Show()
     
  if (result)
  {
-    {console.log(result._embedded.cast)}
         return(
             
             <div className="show-container">
                 {result.image != null ? <img src={result.image.medium} alt={result.name} width="30%" height="auto"/> : <img src="https://images.pexels.com/photos/3962259/pexels-photo-3962259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="we are closed sign" width="200px" height="auto"/>}
                 <h1>{result.name}</h1>
-                <p>Release date: {result.premiered}</p>
-                <p>Rating: {result.rating?.average}/10</p>
-                {/* <p>{parse(result.summary)}</p> */}
-                <p>Cast:</p>
+                <h4>Release date: {result.premiered}</h4>
+                <h4>Genres:</h4> {result.genres.map((genre) => genre + " ")}
+                <h4>Rating: {result.rating?.average}/10</h4>
+                <h4>{parse(result.summary)}</h4>
+                <h4>Cast:</h4>
                 {result._embedded.cast.map((actor) => <p><Link to={'/actor/' + actor.person.id}>{actor.person.name}</Link></p>)}
+                <Link to={'/'}><i className="fa-solid fa-house"></i></Link>
             </div>
         )
     } else {
-        return <p>Loading...</p>
+        return <h2>Loading...</h2>
     }
 }
