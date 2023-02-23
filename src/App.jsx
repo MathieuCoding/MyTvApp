@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <h1>{title}</h1>
-      <button onClick={() => setTitle('Internet Media Drum & Bass')}>Whaaaat ?</button>
+      <button onClick={() => setTitle('Internet Media\'s Debacles & Bests')}>Whaaaat ?</button>
       <Search />
     </div>
   )
