@@ -28,7 +28,7 @@ export function Actor()
                 <h4>Born {actor.birthday}</h4>
                 <h4>From {actor.country?.name}</h4>
                 <div>
-                    <h3>Starred in :</h3>
+                    <h3>Starred in:</h3>
                         {actorsShows.map((show) => <p key={show._embedded.show.id}><Link to={"/show/" + show._embedded.show.id}>{show._embedded.show.name}</Link></p>)}
                 </div>
             </>
