@@ -29,7 +29,7 @@ export function Show()
                 {result.rating.average != null && <h4>Rating: {result.rating?.average}/10</h4>}
 
                 <h4>{parse(result.summary)}</h4>
-                <h4>Starring:</h4>
+                <h4>Starring: </h4>
                 {result._embedded.cast.map((actor) => <p key={actor.person.id}><Link to={'/actor/' + actor.person.id}>{actor.person.name}</Link></p>)}
                 <Link to={'/'}><i className="fa-solid fa-house"></i></Link>
             </div>
